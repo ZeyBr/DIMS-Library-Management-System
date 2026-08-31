@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: http: https:;">
+    <title>Kütüphane Yönetimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Kütüphane Yönetim Sistemi</h1>
+
+    <!-- YAZAR BÖLÜMÜ -->
+    <div class="card">
+        <h2>Yeni Yazar Ekle</h2>
+        <form id="authorForm">
+            <div style="flex: 1; min-width: 200px;">
+                <label for="authorName" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">Yazar Adı</label>
+                <input type="text" id="authorName" placeholder="Örn: Sabahattin Ali" required style="width: 100%;">
+            </div>
+            <button type="submit" style="align-self: flex-end;">Ekle</button>
+        </form>
+        <table id="authorTable">
+            <thead><tr><th>ID</th><th>Yazar Adı</th><th>İşlem</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- KİTAP BÖLÜMÜ -->
+    <div class="card">
+        <h2>Yeni Kitap Ekle</h2>
+        <form id="bookForm">
+            <div style="flex: 2; min-width: 200px;">
+                <label for="title" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">Kitap Adı</label>
+                <input type="text" id="title" placeholder="Örn: Kürk Mantolu Madonna" required style="width: 100%;">
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <label for="year" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">Yayın Yılı</label>
+                <input type="number" id="year" placeholder="1943" required style="width: 100%;">
+            </div>
+            <button type="submit" style="align-self: flex-end;">Ekle</button>
+        </form>
+        <table id="bookTable">
+            <thead><tr><th>Kapak</th><th>ID</th><th>Kitap Adı</th><th>Yılı</th><th>İşlem</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- ÖDÜNÇ ALMA BÖLÜMÜ -->
+    <div class="card">
+        <h2>Yeni Ödünç Verme İşlemi</h2>
+        <form id="borrowForm">
+            <div style="flex: 1; min-width: 180px;">
+                <label for="borrowAuthor" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">Yazar Seç</label>
+                <select id="borrowAuthor" required style="width: 100%;">
+                    <option value="">Yazar Seçin...</option>
+                </select>
+            </div>
+            <div style="flex: 1; min-width: 180px;">
+                <label for="borrowBook" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">Kitap Seç</label>
+                <select id="borrowBook" required style="width: 100%;">
+                    <option value="">Kitap Seçin...</option>
+                </select>
+            </div>
+            <div style="flex: 1; min-width: 140px;">
+                <label for="borrowDate" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">Ödünç Tarihi</label>
+                <input type="date" id="borrowDate" required style="width: 100%;">
+            </div>
+            <div style="flex: 1; min-width: 140px;">
+                <label for="returnDate" style="display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 5px;">İade Tarihi</label>
+                <input type="date" id="returnDate" required style="width: 100%;">
+            </div>
+            <button type="submit" style="width: 100%; margin-top: 10px;">Ödünç Ver</button>
+        </form>
+
+        <table id="borrowTable">
+            <thead>
+            <tr>
+                <th>Kapak</th>
+                <th>Kitap Adı</th>
+                <th>Yazar</th>
+                <th>Ödünç Tarihi</th>
+                <th>İade Tarihi</th>
+                <th>İşlem</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: #F9F8F6; /* Yumuşak krem arka plan */
+    color: #1E1E1E; /* Tam siyah yerine yumuşak koyu gri */
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+}
+
+/* KART TASARIMLARI (Kalın çerçeve ve sert gölge) */
+.card {
+    background: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 35px;
+    border: 2px solid #1E1E1E;
+    border-radius: 20px; /* Belirgin yuvarlak köşeler */
+    box-shadow: 6px 6px 0px #1E1E1E; /* Görseldeki gibi sert gölge */
+}
+
+/* Her karta görseldeki gibi farklı pastel renkler veriyoruz */
+.card:nth-of-type(1) { background-color: #EBE4F4; } /* Açık Lila (Yazar) */
+.card:nth-of-type(2) { background-color: #D9EFE3; } /* Açık Nane Yeşili (Kitap) */
+.card:nth-of-type(3) { background-color: #FFFFFF; } /* Beyaz (Ödünç Alma) */
+
+/* FORM ELEMANLARI */
+form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+input, select {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 18px;
+    border: 2px solid #1E1E1E;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #FFFFFF;
+    outline: none;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.03); /* Hafif iç gölge */
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    box-shadow: 4px 4px 0px #1E1E1E;
+    transform: translateY(-2px);
+}
+
+/* ANA BUTONLAR (Görseldeki turuncu tonu) */
+button {
+    padding: 14px 28px;
+    background-color: #F78C6B; /* Görseldeki turuncu/şeftali rengi */
+    color: #1E1E1E;
+    border: 2px solid #1E1E1E;
+    border-radius: 30px; /* Hap (pill) şekli */
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #1E1E1E;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Tıklama efekti (Gölge kaybolur, buton aşağı iner) */
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #1E1E1E;
+}
+
+/* TABLOLAR (Yuvarlak hatlı ve çerçeveli liste) */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FFFFFF;
+    border: 2px solid #1E1E1E;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #1E1E1E;
+}
+
+th {
+    background-color: #F9F8F6;
+    font-weight: 700;
+}
+
+/* Son satırın alt çizgisini kaldır */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* SİLME BUTONU (Görseldeki pembe/kırmızı tonu) */
+.delete-btn {
+    background-color: #F5D6D6; /* Yumuşak pembe */
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    box-shadow: 3px 3px 0px #1E1E1E;
+}
+
+.delete-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px #1E1E1E;
+}
