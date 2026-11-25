@@ -45,7 +45,7 @@ mvn test
 
 The controller tests use MockMvc and Mockito and run without MySQL.
 GitHub Actions runs the tests on pull requests.
-
+---
 ## 📂 Proje Dizin Yapısı
 
 ```text
