@@ -30,6 +30,22 @@ Bu projede sürdürülebilir, modüler ve test edilebilir kod yazmak amacıyla *
 
 ---
 
+## API Tests
+
+Run the tests from the project root with Java 21 and Maven:
+
+```bash
+mvn test
+```
+
+`BookControllerTest` covers two cases for `GET /api/books/{id}`:
+
+- Existing book: returns `200 OK` and the requested book ID in the JSON response.
+- Missing book: returns `404 Not Found`.
+
+The controller tests use MockMvc and Mockito and run without MySQL.
+GitHub Actions runs the tests on pull requests.
+
 ## 📂 Proje Dizin Yapısı
 
 ```text
