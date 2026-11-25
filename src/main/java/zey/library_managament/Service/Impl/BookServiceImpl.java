@@ -37,6 +37,14 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
+    public BookDTO getBookById(Long id) {
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Kitap bulunamadı: " + id));
+
+        return mapper.toBookDTO(book);
+    }
+
+    @Override
     public void deleteBook(Long id) {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Kitap bulunamadı: " + id));
